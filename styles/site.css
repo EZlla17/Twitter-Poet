@@ -54,7 +54,7 @@ body{
     position: fixed; 
     top: 0;
     left: 0;
-    width: 15%;
+    width: 200px;
     height: 100%;
     background-color: #F7F7F7;
     border-right: solid 1px #0000002b;
@@ -83,4 +83,37 @@ body{
     padding-left: 10px;
     color:#959595;
     font-size: 14px;
+}
+
+.main-content{
+    padding-left: 180px;
+}
+
+.menu{
+    position: fixed; 
+    top: 0px;
+    width: calc(100% - 220px);
+    background-color: white;
+}
+
+.menu-icons{
+    padding-top: 30px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: row;
+    gap:15px;
+}
+
+.menu-icon{
+    width:20px;
+    height:20px;
+}
+
+.content-tile{
+    display: flex;
+    flex-direction: row;
+    padding-left: 40px;
+    padding-top: 20px;
+    justify-items: center;
+    align-items: center;
 }
