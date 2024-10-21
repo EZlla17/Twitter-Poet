@@ -5,6 +5,12 @@ body{
     height:100%;
 }
 
+p, a{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
 .user-block{
     display: flex;
     flex-direction: row;
@@ -83,7 +89,31 @@ body{
     padding-left: 10px;
     color:#959595;
     font-size: 14px;
+    position:relative;
+    text-decoration: none;
 }
+
+.options:hover{
+    color:#000000;
+}
+
+.options::before {
+    content: '';
+    width: 0;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #545454;
+    position: absolute;
+    bottom: -.25rem;
+    left: 10px;
+    transition: width .4s;
+}
+
+.options:hover::before {
+    width: calc(100% - 10px);
+}
+
+
 
 .main-content{
     padding-left: 180px;
@@ -125,4 +155,15 @@ body{
     align-items: center;
     padding-left: 40px;
     padding-top: 20px;
+}
+
+.view-comment{
+    padding-top:10px;
+    color:#929292;
+    text-decoration: none;
+}
+
+.view-comment:hover {
+    color: #000000;
+    text-decoration: none;
 }
