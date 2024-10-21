@@ -87,12 +87,13 @@ body{
 
 .main-content{
     padding-left: 180px;
+    width:100%;
 }
 
 .menu{
     position: fixed; 
     top: 0px;
-    width: calc(100% - 220px);
+    width: calc(100% - 240px);
     background-color: white;
 }
 
@@ -109,11 +110,19 @@ body{
     height:20px;
 }
 
-.content-tile{
+.profile-tile{
     display: flex;
     flex-direction: row;
     padding-left: 40px;
     padding-top: 20px;
     justify-items: center;
     align-items: center;
+}
+
+.content-tile{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 40px;
+    padding-top: 20px;
 }
