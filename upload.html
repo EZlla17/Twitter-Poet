@@ -27,7 +27,7 @@
             <div style="width: 80%; height:1px; background-color: #D8D8D8; margin-left: 20px;"></div>
 
             <!-- left side bar options -->
-            <div style="padding-top: 40px; padding-left: 20px; gap:10px; display: flex; flex-direction: column;">
+            <div style="margin-top: 40px; padding-left: 20px; gap:10px; display: flex; flex-direction: column;">
                 <div class="side-option" style="display: flex; flex-direction: row; align-items: center;">
                     <img class="side-icons" src="images/posts.svg">
                     <a class="options" href="posts.html">View Posts</a>
@@ -59,26 +59,53 @@
             <div class="content" style="padding-top: 70px;">
                 <div class="profile-tile" style="padding-right: 50px;">
                     <div style="display: flex; flex-direction: row; align-items: center;">
-                    <img src="images/TMG.png" style="width: 60px; height: 60px; border-radius: 50%;">
-                    <div style="padding-left: 20px;">
-                        <p style="margin-top:5px; margin-bottom:5px;color:#929292">GHOST ACCOUNT</p>
-                        <p style="margin-top:5px; margin-bottom:5px; color: #929292">Xinyi_past_self</p>
-                        <p style="margin-top:5px; margin-bottom:5px;">Day <strong>10</strong> of the Study, <strong>28</strong> days left</p>
-                        <p style="margin-top:5px; margin-bottom:5px;"><strong>10</strong> posts uploaded to Instagram, <strong>20</strong> left</p>
-                        <p style="margin-top:5px; margin-bottom:5px;">NOTE: was very close to grandma-grandma passed 5 years ago...</p>
-                    </div>
+                        <img src="images/TMG.png" style="width: 60px; height: 60px; border-radius: 50%;">
+                        <div style="padding-left: 20px;">
+                            <p style="margin-top:5px; margin-bottom:5px;color:#929292">GHOST ACCOUNT</p>
+                            <p style="margin-top:5px; margin-bottom:5px; color: #929292">Xinyi_past_self</p>
+                            <p style="margin-top:5px; margin-bottom:5px;">Day <strong>10</strong> of the Study,
+                                <strong>28</strong> days left
+                            </p>
+                            <p style="margin-top:5px; margin-bottom:5px;"><strong>10</strong> posts uploaded to
+                                Instagram, <strong>20</strong> left</p>
+                            <p style="margin-top:5px; margin-bottom:5px;">NOTE: was very close to grandma-grandma passed
+                                5 years ago...</p>
+                        </div>
                     </div>
                 </div>
                 <div style="height:1px; background-color:#D8D8D8; width:100%;margin-top:20px"></div>
 
-                <div class="input-container" style="display: flex; flex-direction: column; padding-left: 40px; padding-top: 20px;">
-                    <!-- Text Input-->
-                    <label for="userText">Enter the Text:</label>
-                    <textarea type="text" id="userText" placeholder="Enter text here..." 
-                              style="margin-top: 10px; height:100px ;
+                <div class="input-container">
+                    <form action="/submit" method="POST" enctype="multipart/form-data"
+                        style="display: flex; flex-direction: column; margin-left: 40px; margin-top: 30px;">
+                        <label for="userText">Enter the Text<span style="color:red">*</span></label>
+                        <textarea type="text" id="userText" placeholder="Enter text here..." style="margin-top: 10px; height:100px ;
                               border: solid 1px #D8D8D8;
                               border-radius: 5px;
                               padding:10px"></textarea>
+
+                        <label for="image" style="margin-top: 30px;">Upload images</label>
+                        <input type="file" id="image" name="image" style="padding-top: 10px" multiple required>
+
+                        <label style="margin-top: 30px;">Where to Post<span style="color:red">*</span></label>
+                        <div style="display: flex;flex-direction: column;">
+                            <div style="display: flex;flex-direction: row; padding-top: 5px;">
+                                <input type="checkbox" id="Instagram" name="socialMedia" value="Instagram">
+                                <label for="Instagram">Instagram</label>
+                            </div>
+                            <div style="display: flex;flex-direction: row;padding-top: 5px;">
+                                <input type="checkbox" id="Facebook" name="socialMedia" value="Facebook">
+                                <label for="Facebook">Facebook</label>
+                            </div>
+                            <div style="display: flex;flex-direction: row;padding-top: 5px;">
+                                <input type="checkbox" id="Twitter" name="socialMedia" value="Twitter">
+                                <label for="Twitter">Twitter</label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="upload-button" style="width:150px; margin-left: 0; margin-top: 30px;">Upload</button>
+
+                    </form>
                 </div>
             </div>
 
